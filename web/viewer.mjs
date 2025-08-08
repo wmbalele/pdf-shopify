@@ -915,9 +915,9 @@ const defaultOptions = {
 };
 {
   defaultOptions.defaultUrl = {
-    value: "compressed.tracemonkey-pldi-09.pdf",
-    kind: OptionKind.VIEWER
-  };
+  value: "https://cdn.shopify.com/s/files/1/0727/6291/7122/files/multillantas-catalogo-aplicaciones-tudor-mayo-2025.pdf",
+  kind: OptionKind.VIEWER
+};
   defaultOptions.sandboxBundleSrc = {
     value: "../build/pdf.sandbox.mjs",
     kind: OptionKind.VIEWER
