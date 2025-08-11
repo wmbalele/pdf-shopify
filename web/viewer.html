@@ -26,33 +26,31 @@ See https://github.com/adobe-type-tools/cmap-resources
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="google" content="notranslate">
     <title>PDF.js viewer</title>
-
-<!-- This snippet is used in production (included from viewer.html) -->
-<link rel="resource" type="application/l10n" href="locale/locale.json">
-<script src="../build/pdf.mjs" type="module"></script>
-
+    <!-- This snippet is used in production (included from viewer.html) -->
+    <link rel="resource" type="application/l10n" href="locale/locale.json">
+    <script src="../build/pdf.mjs" type="module"></script>
     <link rel="stylesheet" href="viewer.css">
-
   <script src="viewer.mjs" type="module"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+      });
+    
       const btnPrint = document.getElementById("printButton");
-      const btnDownload = document.getElementById("downloadButton");
-
       if (btnPrint) {
         btnPrint.onclick = (e) => { e.stopPropagation(); e.preventDefault(); };
         btnPrint.addEventListener("click", (e) => e.stopImmediatePropagation(), true);
       }
-
+    
+      const btnDownload = document.getElementById("downloadButton");
       if (btnDownload) {
         btnDownload.onclick = (e) => { e.stopPropagation(); e.preventDefault(); };
         btnDownload.addEventListener("click", (e) => e.stopImmediatePropagation(), true);
       }
     });
   </script>
-
   </head>
-
   <body tabindex="0">
     <div id="outerContainer">
       <span id="viewer-alert" class="visuallyHidden" role="alert"></span>
