@@ -17227,8 +17227,7 @@ function getViewerConfiguration() {
       editorStampButton: document.getElementById("editorStampButton"),
       editorStampParamsToolbar: document.getElementById("editorStampParamsToolbar"),
       editorSignatureButton: document.getElementById("editorSignatureButton"),
-      editorSignatureParamsToolbar: document.getElementById("editorSignatureParamsToolbar"),
-      download: document.getElementById("downloadButton")
+      editorSignatureParamsToolbar: document.getElementById("editorSignatureParamsToolbar")
     },
     secondaryToolbar: {
       toolbar: document.getElementById("secondaryToolbar"),
