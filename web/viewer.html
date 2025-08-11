@@ -34,6 +34,22 @@ See https://github.com/adobe-type-tools/cmap-resources
     <link rel="stylesheet" href="viewer.css">
 
   <script src="viewer.mjs" type="module"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const btnPrint = document.getElementById("print");
+      const btnDownload = document.getElementById("download");
+
+      if (btnPrint) {
+        btnPrint.onclick = (e) => { e.stopPropagation(); e.preventDefault(); };
+        btnPrint.addEventListener("click", (e) => e.stopImmediatePropagation(), true);
+      }
+
+      if (btnDownload) {
+        btnDownload.onclick = (e) => { e.stopPropagation(); e.preventDefault(); };
+        btnDownload.addEventListener("click", (e) => e.stopImmediatePropagation(), true);
+      }
+    });
+  </script>
   </head>
 
   <body tabindex="0">
@@ -280,7 +296,7 @@ See https://github.com/adobe-type-tools/cmap-resources
                     <span data-l10n-id="pdfjs-print-button-label"></span>
                   </button>
 
-                  <button id="downloadButton" class="jordanv4 toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-save-button">
+                  <button id="downloadButton" class="jordanjbalvin toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-save-button">
                     <span data-l10n-id="pdfjs-save-button-label"></span>
                   </button>
                 </div>
