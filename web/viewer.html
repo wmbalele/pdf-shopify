@@ -36,8 +36,8 @@ See https://github.com/adobe-type-tools/cmap-resources
   <script src="viewer.mjs" type="module"></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const btnPrint = document.getElementById("print");
-      const btnDownload = document.getElementById("download");
+      const btnPrint = document.getElementById("printButton");
+      const btnDownload = document.getElementById("downloadButton");
 
       if (btnPrint) {
         btnPrint.onclick = (e) => { e.stopPropagation(); e.preventDefault(); };
@@ -50,6 +50,7 @@ See https://github.com/adobe-type-tools/cmap-resources
       }
     });
   </script>
+
   </head>
 
   <body tabindex="0">
@@ -292,11 +293,11 @@ See https://github.com/adobe-type-tools/cmap-resources
                 <div id="editorModeSeparator" class="verticalToolbarSeparator"></div>
 
                 <div class="toolbarHorizontalGroup hiddenMediumView">
-                  <button id="printButton" class="toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-print-button">
+                  <button id="printButton" class="hidden toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-print-button">
                     <span data-l10n-id="pdfjs-print-button-label"></span>
                   </button>
 
-                  <button id="downloadButton" class="jordanjbalvin toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-save-button">
+                  <button id="downloadButton" class="hidden toolbarButton" type="button" tabindex="0" data-l10n-id="pdfjs-save-button">
                     <span data-l10n-id="pdfjs-save-button-label"></span>
                   </button>
                 </div>
